@@ -36,8 +36,14 @@ namespace Lab3
     {
         static void Main(string[] args)
         {
-            
+            double far, celsius;
+            string advisory = "";
             Console.Write("Temperature Conversion - Input a Farenheit temperature\n");
+            far = Convert.ToDouble(Console.ReadLine());
+            celsius = (far - 32d) * .555;
+            if (far <= 40) advisory = "It is Cold\n";
+            if (far >= 90) advisory = "It is Hot\n";
+            Console.Write("Celsius temp = " + celsius + " degrees, " + advisory);
 
             int counter = 1;
             Console.Write("\n\nCounting by 1's \n");
